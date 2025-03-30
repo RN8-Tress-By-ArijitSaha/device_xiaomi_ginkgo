@@ -201,6 +201,9 @@ vendor.product.manufacturer=OPD
 # DRM
 drm.service.enabled=true
 
+# Fingerprint
+persist.vendor.fingerprint.type=rear
+
 # FS-verity
 ro.apk_verity.mode=2
 
