@@ -25,6 +25,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/ginkgo/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit some common device props
+TARGET_INCLUDE_WIFI_EXT := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# Gms Flag
+WITH_GMS := true
+
 # Device identifier
 PRODUCT_NAME := lineage_ginkgo
 PRODUCT_DEVICE := ginkgo
