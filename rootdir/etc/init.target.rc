@@ -239,6 +239,8 @@ service charge_logger /vendor/bin/charge_logger
    oneshot
 
 on property:sys.boot_completed=1
+    # Disable statsd service to prevent additional battery drain
+    stop statsd
     mkdir /data/vendor/charge_logger 0771 system system
     start charge_logger
 
