@@ -151,3 +151,11 @@ on property:vendor.post_boot.parsed=1
 on charger
     chown system system /sys/class/leds/red/brightness
     write /sys/class/leds/red/brightness 255
+
+on property:vendor.post_boot.parsed=1
+    # Set permissions for FPS and battery temp access
+    chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
+    chmod 0660 /sys/class/drm/sde-crtc-0/measured_fps
+
+    chown system system /sys/class/power_supply/battery/temp
+    chmod 0660 /sys/class/power_supply/battery/temp

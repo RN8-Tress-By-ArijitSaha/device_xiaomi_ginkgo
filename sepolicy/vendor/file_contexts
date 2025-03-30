@@ -55,3 +55,8 @@
 # FPS Info
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps    u:object_r:sysfs_fps:s0
 
+
+# Process and system statistics files
+/proc/stat u:object_r:proc_stat:s0
+/sys/class/kgsl/kgsl-3d0/gpu_busy_percentage    u:object_r:vendor_sysfs_kgsl:s0
+/sys/class/kgsl/kgsl-3d0/temp                    u:object_r:vendor_sysfs_kgsl:s0
